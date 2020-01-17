@@ -6,14 +6,15 @@ function InputField(props) {
   const [genre, setGenre] = useState("");
   const [rating, setRating] = useState("");
 
-  const clicked = () => {
+  const onSubmit = e => {
+    e.preventDefault();
     props.onClick([
       { id: 0, title: song, artist: artist, genre: genre, rating: rating }
     ]);
   };
 
   return (
-    <div className="InputField">
+    <form onSubmit={onSubmit} className="InputField">
       <input
         type="text"
         name="song"
@@ -39,8 +40,10 @@ function InputField(props) {
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      <button onClick={clicked}>Voeg Toe</button>
-    </div>
+      <button type="submit" value="submit">
+        Voeg Toe
+      </button>
+    </form>
   );
 }
 export default InputField;

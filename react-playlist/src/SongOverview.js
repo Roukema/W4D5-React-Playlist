@@ -7,16 +7,13 @@ import NavBar from "./NavBar";
 function SongOverview() {
   let [, setState] = useState();
   const [songArray, setSongArray] = useState([
-    { id: 1, title: "dallo", artist: "world", genre: "herrie", rating: 1 },
-    { id: 2, title: "allo", artist: "world", genre: "herrie", rating: 1 },
-    { id: 3, title: "zallo", artist: "world", genre: "herrie", rating: 1 },
-    { id: 4, title: "hallo", artist: "world", genre: "herrie", rating: 1 }
+    { id: 1, title: "dallo", artist: "aorld", genre: "serrie", rating: 1 },
+    { id: 2, title: "allo", artist: "zorld", genre: "aerrie", rating: 4 },
+    { id: 3, title: "zallo", artist: "corld", genre: "derrie", rating: 3 },
+    { id: 4, title: "hallo", artist: "borld", genre: "zerrie", rating: 2 }
   ]);
 
-  console.log("songs in overview", songArray);
-
   function addSong(props) {
-    console.log("props addsong", props);
     const [newSong] = props;
     const newId = songArray.length + 1;
     setSongArray([
@@ -29,28 +26,48 @@ function SongOverview() {
         rating: newSong.rating
       }
     ]);
-    console.log("arg addsong", newSong);
+    // console.log("arg addsong", newSong);
   }
-
-  // function filterSong() {
-
-  //   // });
-  // }
 
   function filter(props) {
     const buttonClicked = props.target.id;
+
     switch (buttonClicked) {
-      case "filterSong":
-        filterAZ();
+      case "filterSongA":
+        setSongArray(songArray.sort((a, b) => (a.title > b.title ? 1 : -1)));
+        setState({});
+        break;
+      case "filterArtistA":
+        setSongArray(songArray.sort((a, b) => (a.artist > b.artist ? 1 : -1)));
+        setState({});
+        break;
+      case "filterGenreA":
+        setSongArray(songArray.sort((a, b) => (a.genre > b.genre ? 1 : -1)));
+        setState({});
+        break;
+      case "filterRating5":
+        setSongArray(songArray.sort((a, b) => (a.rating > b.rating ? -1 : 1)));
+        setState({});
+        break;
+      case "filterSongZ":
+        setSongArray(songArray.sort((a, b) => (a.title > b.title ? -1 : 1)));
+        setState({});
+        break;
+      case "filterArtistZ":
+        setSongArray(songArray.sort((a, b) => (a.artist > b.artist ? -1 : 1)));
+        setState({});
+        break;
+      case "filterGenreZ":
+        setSongArray(songArray.sort((a, b) => (a.genre > b.genre ? -1 : 1)));
+        setState({});
+        break;
+      case "filterRating1":
+        setSongArray(songArray.sort((a, b) => (a.rating > b.rating ? -1 : 1)));
+        setState({});
         break;
     }
   }
 
-  function filterAZ() {
-    setSongArray(songArray.sort((a, b) => (a.title > b.title ? 1 : -1)));
-    setState({});
-  }
-  console.log("je bent langs sort", songArray);
   function emptyList() {
     setSongArray([]);
   }
@@ -58,8 +75,6 @@ function SongOverview() {
     const id = event.target.id;
     setSongArray(songArray.filter(item => item.id != id));
   }
-  // songArray.splice(id, 1);
-  // setSongArray([...songArray]);
 
   return (
     <div>

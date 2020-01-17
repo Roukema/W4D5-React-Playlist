@@ -10,10 +10,32 @@ body {
   display: grid;
   grid-template: auto/repeat(4, 2fr) 1fr;
   list-style: none;
+  padding-left: 0px;
 }
+
 .FilterButtons li {
+  border-top: 1px solid #96d1f8;
+  background: #65a9d7;
+  padding: 5px 10px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+  color: white;
+  font-size: 12px;
   text-align: center;
-  display: block;
+  font-family: Georgia, serif;
+  text-decoration: none;
+  vertical-align: middle;
+  display: flexbox;
+}
+.FilterButtons li:hover {
+  border-top-color: #28597a;
+  background: #28597a;
+  color: #ccc;
+}
+.FilterButtons li:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
 }
 
 .SongListItems ul {
@@ -25,9 +47,41 @@ body {
   text-align: center;
 }
 .SongListItems img {
+  align-self: center;
   height: 15px;
 }
 .Songs {
   padding-left: 0;
   list-style: none;
+}
+.Songs ul {
+  padding-left: 0;
+}
+.Songs li {
+  padding: 10px;
+}
+.FilterButtons li p {
+  float: center;
+  padding-top: auto;
+  padding-bottom: auto;
+  padding: 0px;
+  margin: 0px;
+}
+.up img {
+  height: 20px;
+  padding: 10px;
+  justify-content: center;
+  transform: rotate(180deg);
+  padding-top: auto;
+  padding-bottom: auto;
+  float: right;
+}
+.down img {
+  height: 20px;
+  float: left;
+  justify-content: center;
+  padding: 10px;
+
+  padding-top: auto;
+  padding-bottom: auto;
 }
