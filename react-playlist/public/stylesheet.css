@@ -1,0 +1,30 @@
+body {
+  background-color: lightcyan;
+}
+.InputField {
+  text-align: center;
+}
+.Songlist {
+}
+.FilterButtons ul {
+  display: grid;
+  grid-template: auto/repeat(4, 1fr);
+  list-style: none;
+}
+.FilterButtons li {
+  text-align: center;
+  display: block;
+}
+
+.SongListItems ul {
+  display: grid;
+  grid-template: auto/repeat(4, 1fr);
+  list-style: none;
+}
+.SongListItems li {
+  text-align: center;
+}
+.Songs {
+  padding-left: 0;
+  list-style: none;
+}
