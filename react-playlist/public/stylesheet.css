@@ -8,7 +8,7 @@ body {
 }
 .FilterButtons ul {
   display: grid;
-  grid-template: auto/repeat(4, 1fr);
+  grid-template: auto/repeat(4, 2fr) 1fr;
   list-style: none;
 }
 .FilterButtons li {
@@ -18,11 +18,14 @@ body {
 
 .SongListItems ul {
   display: grid;
-  grid-template: auto/repeat(4, 1fr);
+  grid-template: auto/repeat(4, 2fr) 1fr;
   list-style: none;
 }
 .SongListItems li {
   text-align: center;
+}
+.SongListItems img {
+  height: 15px;
 }
 .Songs {
   padding-left: 0;

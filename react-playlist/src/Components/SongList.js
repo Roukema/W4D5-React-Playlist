@@ -5,9 +5,9 @@ function SongList(props) {
   //hier gaan we de array mappen
   const songArray = props.item;
   //   console.log("props", props);
-  console.log("songarray", songArray);
+  // console.log("songarray", songArray);
   const songListItems = songArray.map(item => (
-    <SongListItems item={item} key={item.id} />
+    <SongListItems item={item} key={item.id} imgClick={props.imgClick} />
   ));
   return (
     <div className="Songlist">

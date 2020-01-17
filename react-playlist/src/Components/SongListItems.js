@@ -1,8 +1,6 @@
 import React from "react";
 
 function SongListItems(props) {
-  //   console.log("propies", props);
-
   return (
     <li id={props.item.id} className="SongListItems">
       <ul>
@@ -10,6 +8,11 @@ function SongListItems(props) {
         <li>{props.item.artist} </li>
         <li>{props.item.genre} </li>
         <li>{props.item.rating} </li>
+        <img
+          id={props.item.id}
+          onClick={props.imgClick}
+          src=".\trash-delete-icon.png"
+        />
       </ul>{" "}
     </li>
   );
