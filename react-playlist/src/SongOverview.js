@@ -62,7 +62,7 @@ function SongOverview() {
         setState({});
         break;
       case "filterRating1":
-        setSongArray(songArray.sort((a, b) => (a.rating > b.rating ? -1 : 1)));
+        setSongArray(songArray.sort((a, b) => (a.rating > b.rating ? 1 : -1)));
         setState({});
         break;
     }
